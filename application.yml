@@ -51,8 +51,9 @@ spring:
         maxInterval: 5000
         maxAttempts: 20
       discovery:
-        serviceId: config-server
-        enabled: true 
+        #serviceId: config-server
+        enabled: false
+      uri: http://support.awsdemo.io:8761/config
            
 server:
   port: 8080   
@@ -63,7 +64,7 @@ eureka:
 #    nonSecurePort: 80
   client:
     serviceUrl:
-      defaultZone: http://eureka1.awsdemo.io/eureka/,http://eureka2.awsdemo.io/eureka/
+      defaultZone: http://support.awsdemo.io:8761/eureka/eureka/,http://support.awsdemo.io:8761/eureka2/eureka/
 
 ---
 spring:
