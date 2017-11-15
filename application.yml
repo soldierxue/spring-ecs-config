@@ -53,7 +53,7 @@ spring:
       discovery:
         #serviceId: config-server
         enabled: false
-      uri: http://support.awsdemo.io:8761/config
+      uri: http://config.sasubmit.cc:8761/config
            
 server:
   port: 8080   
@@ -64,7 +64,7 @@ eureka:
 #    nonSecurePort: 80
   client:
     serviceUrl:
-      defaultZone: http://support.awsdemo.io:8761/eureka/eureka/,http://support.awsdemo.io:8761/eureka2/eureka/
+      defaultZone: http://eureka.sasubmit.cc:8761/eureka/,http://eureka2.sasubmit.cc:8761/eureka/
 
 ---
 spring:
