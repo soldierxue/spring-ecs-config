@@ -59,8 +59,8 @@ server:
   port: 8080   
    
 eureka:
-#  instance:
-#    hostname: ${vcap.application.uris[0]:localhost}
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}:${random.value}}
 #    nonSecurePort: 80
   client:
     serviceUrl:
