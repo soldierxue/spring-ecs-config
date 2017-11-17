@@ -63,6 +63,8 @@ eureka:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}:${random.value}}
 #    nonSecurePort: 80
   client:
+    healthcheck:
+      enabled: true
     serviceUrl:
       defaultZone: http://eureka.sasubmit.cc:8761/eureka/,http://eureka2.sasubmit.cc:8761/eureka/
 
